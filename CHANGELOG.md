@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.2](https://github.com/naimo84/node-red-contrib-dyson-purelink/compare/v0.4.1...v0.4.2) (2021-10-28)
+
+
+### Features
+
+* [#21](https://github.com/naimo84/node-red-contrib-dyson-purelink/issues/21), added sleeptimer and query userstatus ([abc2a49](https://github.com/naimo84/node-red-contrib-dyson-purelink/commit/abc2a4907b16bbab3f90e1b8aeca12ddf9bed884))
+
 ### [0.4.1](https://github.com/naimo84/node-red-contrib-dyson-purelink/compare/v0.4.0...v0.4.1) (2021-10-28)
 
 
