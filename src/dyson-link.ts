@@ -155,7 +155,7 @@ module.exports = function (RED: Red) {
                     device.getSleepTimer().then(t => node.send({ payload: { sleep_timer: t } }))
                     break;
                 case 'setSleepTimer':
-                    device.setSleepTimer(10).then(t => node.send({ payload: { sleep_timer: t } }))
+                    device.setSleepTimer(node.value || msg.payload.sleep_timer || 15).then(t => node.send({ payload: { sleep_timer: t } }))
                     break;
                 case 'setAutoOnStatus':
                     device.setAuto(true).then(t => node.send({ payload: { auto_on: t } }))
