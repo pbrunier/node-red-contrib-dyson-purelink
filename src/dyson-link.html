@@ -74,7 +74,7 @@
 
                 $('#node-input-action').change(function () {
                     var value = $('#node-input-action').val()
-                    if (value === 'setRotation' || value === 'setFanSpeed') {
+                    if (value === 'setRotation' || value === 'setFanSpeed' || value === 'setSleepTimer') {
                         $('#node-input-value').parent().show();
                         $('#node-input-value').parent().show();
                     } else {
@@ -135,6 +135,8 @@
                 <option value="setAutoOffStatus">set AutoOff Status</option> 
                 <option value="setRotation">set Rotation</option>
                 <option value="setRotationAngle">set Rotation Angle</option>
+                <option value="getSleepTimer">get Sleep Timer</option>
+                <option value="setSleepTimer">set Sleep Timer</option>
                 <option value="setHeatOn">set Heat On</option>
                 <option value="setHeatOff">set Heat Off</option>
                 <option value="setFanSpeed">set Fan Speed</option>
