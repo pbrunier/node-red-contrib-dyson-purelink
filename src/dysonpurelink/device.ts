@@ -96,10 +96,25 @@ export class Device extends EventEmitter {
         this.hasJetFocus = true;
         this._apiV2018 = true;
         break;
+      case '358E':
+        this.model = 'Dyson Pure Humidify+Cool';
+        this.hardwareRevision = 'PH03';
+        this.hasAdvancedAirQualitySensors = true;
+        this.hasHumidifier = true;
+        this.hasJetFocus = true;
+        this._apiV2018 = true;
+        break;
       case '438':
         this._apiV2018 = true;
         this.model = 'Dyson Pure Cool Tower';
         this.hardwareRevision = 'TP04';
+        this.hasJetFocus = true;
+        this.hasAdvancedAirQualitySensors = true;
+        break;
+      case '438E':
+        this._apiV2018 = true;
+        this.model = 'Dyson Pure Cool Tower Formaldehyde';
+        this.hardwareRevision = 'TP07';
         this.hasJetFocus = true;
         this.hasAdvancedAirQualitySensors = true;
         break;
