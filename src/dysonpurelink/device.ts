@@ -87,7 +87,7 @@ export class Device extends EventEmitter {
       this.options.protocolId = 'MQIsdp'
     }
     debugdevice(`productType: ${this.productType}`)
-    switch (this.productType) {
+    switch (this.productType.toString().toUpperCase()) {
       case '358':
         this.model = 'Dyson Pure Humidify+Cool';
         this.hardwareRevision = 'PH01';
