@@ -4,24 +4,12 @@ This Node RED module can control dyson purifier. (tested with dyson hot&cool pur
 
 > Node-RED is a tool for wiring together hardware devices, APIs and online services in new and interesting ways.
 
+## :newspaper: News June 2023
+After this project has been archived for a while, Patrick Brunier took over the project from Benjamin (naimo84). Naimo84 created a very usefull Node-RED node, making the life of Dyson purifier owners at least a bit easier. Thank you Naimo84! I (Patrick) will try to continue the development of the node. First things I will do is creating the baseline for further development. The first version that will be released, will be a maintenance release.
+
 ## :question: Get Help
 
- For bug reports and feature requests, open issues. :bug: 
-
-## :sparkling_heart: Support my projects
-
-I open-source almost everything I can, and I try to reply to everyone needing help using these projects. Obviously,
-this takes time. You can integrate and use these projects in your applications *for free*! You can even change the source code and redistribute (even resell it).
-
-However, if you get some profit from this or just want to encourage me to continue creating stuff, there are few ways you can do it:
-
- - Starring and sharing the projects you like :rocket:
- - [![PayPal][badge_paypal]][paypal-donations] **PayPal**— You can make one-time donations via PayPal. I'll probably buy a ~~coffee~~ tea. :tea:
- - [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T412CXA) **Ko-fi**— I'll buy a ~~tea~~ coffee. :coffee: :wink:
- - ![](./examples/bitcoin.png) **Bitcoin**—You can send me bitcoins at this address (or scanning the code): `3GqiebqcZeonziRUMYxU35J3jPSMJzpTAc`
- 
-
-Thanks! :heart:
+I'm always open for bug reports and feature requests, please open issues.
 
 ## :cloud: Installation
 
@@ -46,7 +34,7 @@ node-red
 Have an idea? Found a bug? See [how to contribute][contributing].
 
 ```sh
-git clone https://github.com/naimo84/node-red-contrib-dyson-purelink.git
+git clone https://github.com/pbrunier/node-red-contrib-dyson-purelink.git
 cd node-red-contrib-dyson-purelink
 npm install
 gulp
@@ -115,14 +103,7 @@ all copies or substantial portions of the Software.
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Coded with :heart: in :cloud:
-
-[badge_brave]: ./examples/support_banner.png
 [example_flow]: ./examples/flow.png
 [example_flow_json]: ./examples/flow.json
-[badge_paypal]: https://img.shields.io/badge/Donate-PayPal-blue.svg
 
-[paypal-donations]: https://paypal.me/NeumannBenjamin
-
-[brave]: https://brave.com/nai412
 [contributing]: /CONTRIBUTING.md
