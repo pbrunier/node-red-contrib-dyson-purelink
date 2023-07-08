@@ -1,28 +1,22 @@
 {
   "name": "node-red-contrib-dyson-purelink",
-  "version": "0.5.0",
+  "version": "0.6.1",
   "description": "NodeRed dyson purelink Adapter",
-  "author": {
-    "name": "naimo84",
-    "email": "git@neumann-benjamin.de"
-  },
   "contributors": [
+    {
+      "name": "Patrick Brunier",
+      "email": "foss@brunier.nl"
+    },
     {
       "name": "naimo84",
       "email": "git@neumann-benjamin.de"
     },
     {
-      "name": "Patrick Brunier",
-      "email": "foss@brunier.nl"
+      "name": "ajago"
     }
   ],
-  "homepage": "https://github.com/naimo84/node-red-contrib-dyson-purelink",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/naimo84/node-red-contrib-dyson-purelink/blob/master/LICENSE"
-    }
-  ],
+  "homepage": "https://github.com/pbrunier/node-red-contrib-dyson-purelink",
+  "license": "MIT",
   "keywords": [
     "node-red",
     "dyson",
@@ -38,7 +32,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/naimo84/node-red-contrib-dyson-purelink"
+    "url": "https://github.com/pbrunier/node-red-contrib-dyson-purelink"
   },
   "scripts": {
     "start": "gulp && node-red",
@@ -54,35 +48,33 @@
   },
   "funding": {
     "type": "paypal",
-    "url": "https://paypal.me/NeumannBenjamin"
+    "url": "https://paypal.me/pbrunier"
   },
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^1.4.0",
     "bonjour": "3.5.0",
     "cloneextend": "0.0.3",
-    "debug": "^4.1.1",
-    "events": "^3.1.0",
+    "debug": "^4.3.4",
+    "events": "^3.3.0",
     "https": "^1.0.0",
-    "lodash": "^4.17.15",
-    "mqtt": "3.0.0"
+    "lodash": "^4.17.21",
+    "mqtt": "4.3.7"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.149",
-    "@types/mqtt": "^2.5.0",
-    "@types/node": "^12.12.28",
-    "@types/node-red": "^0.20.1",
-    "@types/request-promise-native": "^1.0.17",
-    "commitlint": "^8.3.5",
+    "@types/lodash": "^4.14.195",
+    "@types/node": "^16.11.7",
+    "@types/node-red": "^0.20.3",
+    "@types/request-promise-native": "^1.0.18",
+    "commitlint": "^17.6.6",
     "gulp": "^4.0.2",
-    "gulp-nodemon": "^2.4.2",
-    "gulp-sourcemaps": "^2.6.5",
+    "gulp-nodemon": "^2.5.0",
+    "gulp-sourcemaps": "^3.0.0",
     "gulp-typescript": "^5.0.1",
     "gulp-watch": "^5.0.1",
-    "husky": "3.1.0",
-    "node-red": "1.0.2",
-    "nodemon": "^1.19.4",
-    "release-it": "^14.11.8",
-    "typescript": "^3.8.2"
+    "husky": "8.0.3",
+    "nodemon": "^3.0.0",
+    "release-it": "^16.1.0",
+    "typescript": "^5.1.6"
   },
   "release-it": {
     "git": {
