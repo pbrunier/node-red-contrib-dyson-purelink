@@ -16,12 +16,7 @@
     }
   ],
   "homepage": "https://github.com/pbrunier/node-red-contrib-dyson-purelink",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/pbrunier/node-red-contrib-dyson-purelink/blob/master/LICENSE"
-    }
-  ],
+  "license": "MIT",
   "keywords": [
     "node-red",
     "dyson",
