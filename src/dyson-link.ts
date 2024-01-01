@@ -139,6 +139,9 @@ module.exports = function (RED: Red) {
                 case 'getFanSpeed':
                     device.getFanSpeed().then(t => node.send({ payload: { fan_speed: t } }))
                     break;
+                case 'getJetFocus':
+                    device.getJetFocus().then(t => node.send({ payload: { jet_focus: t } }))
+                    break;
                 case 'getNightModeStatus':
                     device.getNightmodeStatus().then(t => node.send({ payload: { night_mode: t } }))
                     break;
@@ -189,6 +192,12 @@ module.exports = function (RED: Red) {
                     break;
                 case 'setFanSpeed':
                     device.setFanSpeed(node.value || msg.payload.speed).then(t => node.send({ payload: { fan_speed: t } }))
+                    break;
+                case 'setJetFocusOn':
+                    device.setJetFocus(true).then(t => node.send({ payload: { jet_focus: t } }))
+                    break;
+                case 'setJetFocusOff':
+                    device.setJetFocus(false).then(t => node.send({ payload: { jet_focus: t } }))
                     break;
             }
         }

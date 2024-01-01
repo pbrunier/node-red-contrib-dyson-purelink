@@ -4,9 +4,6 @@ This Node RED module can control dyson purifier. (tested with dyson hot&cool pur
 
 > Node-RED is a tool for wiring together hardware devices, APIs and online services in new and interesting ways.
 
-## :newspaper: News June 2023
-After this project has been archived for a while, Patrick Brunier took over the project from Benjamin (naimo84). Naimo84 created a very usefull Node-RED node, making the life of Dyson purifier owners at least a bit easier. Thank you Naimo84! I (Patrick) will try to continue the development of the node. First things I will do is creating the baseline for further development. The first version that will be released, will be a maintenance release.
-
 ## :question: Get Help
 
 I'm always open for bug reports and feature requests, please open issues.
@@ -65,6 +62,7 @@ Possible values are:
 - getRelativeHumidity
 - getFanStatus
 - getFanSpeed
+- getJetFocus
 - getNightModeStatus
 - getRotationStatus
 - getAutoOnStatus                
@@ -74,6 +72,8 @@ Possible values are:
   {"action":"setRotationAngle", "min_angle": 90, "max_angle": 270}
 - setFanSpeed - speed in percent  
   { "action": "setFanSpeed","speed": "100" }
+- setJetFocusOn
+- setJetFocusOff
 - setNightModeOn
 - setNightModeOf
 - setHeatOn

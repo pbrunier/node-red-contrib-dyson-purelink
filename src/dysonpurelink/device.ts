@@ -313,6 +313,16 @@ export class Device extends EventEmitter {
     })
   }
 
+  getJetFocus() {
+    return new Promise((resolve, reject) => {
+      this.once('state', (json) => {
+        const fdir = json['product-state']['fdir']
+        resolve(fdir)
+      })
+      this._requestCurrentState()
+    })
+  }
+
   getNightmodeStatus() {
     return new Promise((resolve, reject) => {
       this.once('state', (json) => {
@@ -376,6 +386,12 @@ export class Device extends EventEmitter {
     const fnsp = Math.round(value / 10)
     this._setStatus({ fnsp: this._apiV2018 && fnsp < 10 ? "000" + fnsp : this._apiV2018 && fnsp === 10 ? "00" + fnsp : fnsp });
     return this.getFanSpeed()
+  }
+
+  setJetFocus(value) {
+    const fdir = value ? 'ON' : 'OFF'
+    this._setStatus({ fdir: fdir });
+    return this.getJetFocus()
   }
 
   setNightMode(value) {
