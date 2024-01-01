@@ -8,8 +8,7 @@
       "email": "foss@brunier.nl"
     },
     {
-      "name": "naimo84",
-      "email": "git@neumann-benjamin.de"
+      "name": "naimo84"
     },
     {
       "name": "ajago"
@@ -51,30 +50,35 @@
     "url": "https://paypal.me/pbrunier"
   },
   "dependencies": {
-    "axios": "^1.4.0",
+    "axios": "^1.6.3",
     "bonjour": "3.5.0",
     "cloneextend": "0.0.3",
     "debug": "^4.3.4",
     "events": "^3.3.0",
     "https": "^1.0.0",
     "lodash": "^4.17.21",
-    "mqtt": "4.3.7"
+    "mqtt": "4.3.8"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.195",
-    "@types/node": "^16.11.7",
-    "@types/node-red": "^0.20.3",
-    "@types/request-promise-native": "^1.0.18",
-    "commitlint": "^17.6.6",
+    "@types/lodash": "^4.14.202",
+    "@types/node": "^18.11.9",
+    "@types/node-red": "^0.20.7",
+    "@types/request-promise-native": "^1.0.21",
+    "commitlint": "^18.4.3",
     "gulp": "^4.0.2",
     "gulp-nodemon": "^2.5.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-typescript": "^5.0.1",
     "gulp-watch": "^5.0.1",
     "husky": "8.0.3",
-    "nodemon": "^3.0.0",
-    "release-it": "^16.1.0",
-    "typescript": "^5.1.6"
+    "nodemon": "^3.0.2",
+    "release-it": "^17.0.1",
+    "typescript": "^5.3.3"
+  },
+  "overrides":{
+    "gulp-typescript":{
+      "source-map": "0.7.4"
+    }
   },
   "release-it": {
     "git": {
