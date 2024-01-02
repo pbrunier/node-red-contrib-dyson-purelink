@@ -83,6 +83,7 @@ Possible values are:
 - setHeatOff
 - turnOn
 - turnOff
+- getDeviceInfo (for support)
 
 For the following actions some additonal parameters are mandatory:
 - setRotation: msg.payload.rotation

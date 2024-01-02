@@ -216,6 +216,19 @@ export class Device extends EventEmitter {
     this.productType = info.productType;
   }
 
+  getDeviceInfo() {
+    return new Promise((resolve, reject) => {
+      this.once('state', (json) => {
+        const deviceInfo = {
+          "productType": this.productType.toString().toUpperCase(),
+          "state": json['product-state'],
+        }
+        resolve(deviceInfo) 
+      });
+      this._requestCurrentState();
+    });
+  }
+
   getTemperature() {
     return new Promise((resolve, reject) => {
       this.once('sensor', (json) => {
