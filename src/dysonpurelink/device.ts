@@ -366,6 +366,20 @@ export class Device extends EventEmitter {
     });
   };
 
+  getTemperatureTarget() {
+    return new Promise((resolve, reject) => {
+      if(this.hasHeating){
+        this.once('state', (json) => {
+          const temperature = parseFloat(((parseInt(json.data.hmax, 10) / 10) - 273.15).toFixed(2))
+          resolve(temperature)
+        })
+      } else {
+        resolve(0)
+      }
+      this._requestCurrentState()
+    })
+  }
+
   turnOff() {
     return this.setFan(false)
   }
@@ -375,7 +389,6 @@ export class Device extends EventEmitter {
   }
 
   setFan(value) {
-
     const data = this._apiV2018 ? { fpwr: value ? 'ON' : 'OFF' } : { fmod: value ? 'FAN' : 'OFF' }
     debugdevice(`setFan - data: ${JSON.stringify(data)}`)
     this._setStatus(data)
@@ -450,6 +463,14 @@ export class Device extends EventEmitter {
     }
   }
 
+  setTemperatureTarget(value) {
+    if(parseInt(value, 10) && value > 0 && value < 38){
+      const data = {hmax: ((value * 10) + 273.15).toFixed()};
+      this._setStatus(data);
+      return this.getTemperatureTarget();
+    }
+  }
+
   _requestCurrentState() {
     debugdevice(`MQTT: ${JSON.stringify(this._getCommandTopic())}`);
     this.client.publish(this._getCommandTopic(), JSON.stringify({
@@ -480,5 +501,3 @@ export class Device extends EventEmitter {
     return `${this._MQTTPrefix}/${this.username}/command`
   }
 }
-
-

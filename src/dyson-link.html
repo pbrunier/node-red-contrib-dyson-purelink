@@ -131,6 +131,7 @@
                 <option value="getNightModeStatus">get Night Mode Status</option>
                 <option value="getRotationStatus">get Rotation Status</option>
                 <option value="getRotationAngle">get Rotation Angle</option>
+                <option value="getTemperatureTarget">BETA: get Temperature Target</option>
                 <option value="getAutoOnStatus">get AutoOn Status</option>                
                 <option value="setAutoOnStatus">set AutoOn Status</option> 
                 <option value="setAutoOffStatus">set AutoOff Status</option> 
@@ -140,6 +141,7 @@
                 <option value="setSleepTimer">set Sleep Timer</option>
                 <option value="setHeatOn">set Heat On</option>
                 <option value="setHeatOff">set Heat Off</option>
+                <option value="setTemperatureTarget">BETA: set Temperature Target</option>
                 <option value="setFanSpeed">set Fan Speed</option>
                 <option value="setJetFocusOn">set Jet Focus on</option>
                 <option value="setJetFocusOff">set Jet Focus off</option>
@@ -170,6 +172,7 @@
         <li>getNightModeStatus</li>
         <li>getRotationStatus</li>
         <li>getRotationAngle</li>
+        <li><b>BETA:</b> getTemperatureTarget</li>
         <li>getAutoOnStatus</li>         
         <li>setRotation</li>
         <li>setRotationAngle</li>  
@@ -180,6 +183,7 @@
         <li>setNightModeOff</li>
         <li>setHeatOn</li>
         <li>setHeatOff</li>
+        <li><b>BETA:</b> setTemperatureTarget</li>
         <li>turnOn</li>
         <li>turnOff</li>
     </ul>
@@ -189,5 +193,6 @@
         <li>setRotation: msg.payload.rotation</li>
         <li>setRotationAngle: msg.payload.min_angle, msg.payload.max_angle</li>
         <li>setFanSpeed: msg.payload.speed</li>
+        <li><b>BETA:</b> setTemperatureTarget: msg.payload.temperatureTarget</li>
     </ul>
 </script>
