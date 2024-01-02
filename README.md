@@ -62,16 +62,19 @@ Possible values are:
 - getRelativeHumidity
 - getFanStatus
 - getFanSpeed
+- getTemperatureTarget
 - getJetFocus
 - getNightModeStatus
 - getRotationStatus
-- getAutoOnStatus                
+- getAutoOnStatus
 - setRotation - rotation (true/false)
   {"action":"setRotation", "rotation": true}
 - setRotationAngle - min_angle (5-355 degrees), max_angle (5-355 degrees)
   {"action":"setRotationAngle", "min_angle": 90, "max_angle": 270}
 - setFanSpeed - speed in percent  
   { "action": "setFanSpeed","speed": "100" }
+- BETA: setTemperatureTarget - Temperature target in degrees celcius (1-37 degrees)
+  { "action": "setTemperatureTarget","temperatureTarget": "20" }
 - setJetFocusOn
 - setJetFocusOff
 - setNightModeOn
@@ -85,6 +88,7 @@ For the following actions some additonal parameters are mandatory:
 - setRotation: msg.payload.rotation
 - setRotationAngle: msg.payload.min_angle, msg.payload.max_angle
 - setFanSpeed: msg.payload.speed
+- BETA: setTemperatureTarget: msg.payload.temperatureTarget
 
 
 ### ExampleFlow:

@@ -149,7 +149,11 @@ module.exports = function (RED: Red) {
                     device.getRotationStatus().then(t => node.send({ payload: { rotation: t } }))
                     break;
                 case 'getRotationAngle':
+                    // TODO BUG: PAYLOAD OBJECT NON-CONFORM
                     device.getRotationAngle().then(t => node.send({ payload: t }))
+                    break;
+                case 'getTemperatureTarget':
+                    device.getTemperatureTarget().then(t => node.send({ payload: { temperatureTarget: t } }))
                     break;
                 case 'getAutoOnStatus':
                     device.getAutoOnStatus().then(t => node.send({ payload: { auto_on: t } }))
@@ -183,6 +187,9 @@ module.exports = function (RED: Red) {
                     break;
                 case 'setHeatOff':
                     device.setHeat(false);
+                    break;
+                case 'setTemperatureTarget':
+                    device.setTemperatureTarget(node.value || msg.payload.temperatureTarget).then(t => node.send({ payload: { temperatureTarget: t } }));
                     break;
                 case 'setRotation':
                     device.setRotation(node.value || msg.payload.rotation).then(t => node.send({ payload: { rotation: t } }))
