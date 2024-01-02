@@ -112,7 +112,7 @@
         </a>
     </div>
     <div class="form-tips">     
-        <i class="fas fa-exclamation"></i>
+        <i class="fa fa-exclamation"></i>
             <b>INFO:</b> IF you know the IP address of the device, it better to use this. Instead bonjour auto-discovery will be used. Sometimes this is magically not working correctly. 
     </div>
     <div class="form-row">
@@ -122,6 +122,7 @@
     <div class="form-row">
         <label for="node-input-action"><i class="fa fa-tag"></i> Action</label>
 		<select type="text" id="node-input-action" style="display: inline-block; width: 70%;" >
+                <option value="">no action selected</option>
                 <option value="getTemperature">get Temperature</option>
                 <option value="getAirQuality">get Air Quality</option>
                 <option value="getRelativeHumidity">get Relative Humidity</option>
