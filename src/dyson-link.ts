@@ -124,6 +124,9 @@ module.exports = function (RED: Red) {
             }
             node.debug("action: " + action)
             switch (action) {
+                case 'getDeviceInfo':
+                    device.getDeviceInfo().then(t => node.send({ payload: { deviceInfo: t } }))
+                    break;
                 case 'getTemperature':
                     device.getTemperature().then(t => node.send({ payload: { temperature: t } }))
                     break;
