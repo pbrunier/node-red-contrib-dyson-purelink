@@ -383,7 +383,7 @@ export class Device extends EventEmitter {
     return new Promise((resolve, reject) => {
       if(this.hasHeating){
         this.once('state', (json) => {
-          const temperature = parseFloat(((parseInt(json.data.hmax, 10) / 10) - 273.15).toFixed(2))
+          const temperature = Math.round((parseInt(json['product-state']['hmax'], 10) / 10) - 273.15);
           resolve(temperature)
         })
       } else {
@@ -478,7 +478,7 @@ export class Device extends EventEmitter {
 
   setTemperatureTarget(value) {
     if(parseInt(value, 10) && value > 0 && value < 38){
-      const data = {hmax: ((value * 10) + 273.15).toFixed()};
+      const data = {hmax: Math.round((value + 273.15)*10)};
       this._setStatus(data);
       return this.getTemperatureTarget();
     }
