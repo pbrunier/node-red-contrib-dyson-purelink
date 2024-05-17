@@ -79,7 +79,7 @@ Possible values are:
   {"action":"setRotationAngle", "min_angle": 90, "max_angle": 270}
 - setFanSpeed - speed in percent  
   { "action": "setFanSpeed","speed": "100" }
-- BETA: setTemperatureTarget - Temperature target in degrees celcius (1-37 degrees)
+- setTemperatureTarget - Temperature target in degrees celcius (1-37 degrees)
   { "action": "setTemperatureTarget","temperatureTarget": "20" }
 - setJetFocusOn
 - setJetFocusOff
@@ -95,7 +95,7 @@ For the following actions some additonal parameters are mandatory:
 - setRotation: msg.payload.rotation
 - setRotationAngle: msg.payload.min_angle, msg.payload.max_angle
 - setFanSpeed: msg.payload.speed
-- BETA: setTemperatureTarget: msg.payload.temperatureTarget
+- setTemperatureTarget: msg.payload.temperatureTarget
 
 
 ### ExampleFlow:
