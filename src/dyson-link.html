@@ -81,8 +81,12 @@
                         $('#node-input-value').parent().hide();
                         $('#node-input-value').parent().hide();
                     }
+                    
                     $('.form-row.toggle').hide()
-                    $('.form-row.' + value).show()
+                    
+                    if(value){
+                        $('.form-row.' + value).show()
+                    }
                 });
 
                 $('#node-input-confignode').change(function () {

@@ -1,3 +1,9 @@
+# In need of maintainer
+
+Since I stopped using Node-RED for my main home automation needs, I can no longer maintain this project.
+Please let me know if you want to take over this project.
+In the mean time I will try to fix bugs when they pop up. No guarantees that I will.
+
 # Node RED dyson pure link
 
 This Node RED module can control dyson purifier. (tested with dyson hot&cool pure link)
